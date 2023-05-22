@@ -1,0 +1,35 @@
+/* Write your CSS here */
+
+.main-container {
+  padding: min(3%, 2em);
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5em, 3vw, 1.7em);
+}
+.header img {
+  width: min(40px, 7%);
+}
+.header h1 {
+  margin-bottom: 10px;
+  align-self: flex-end;
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+.team-cards-list {
+  margin-top: clamp(2em, 5vw, 4em);
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: clamp(0.7em, 3vw, 2em);
+  max-width: 768px;
+}
+div [data-testid='loader'] {
+  margin-top: 4rem;
+  text-align: center;
+}

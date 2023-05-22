@@ -1,0 +1,64 @@
+/* Write your CSS here */
+.latest-match-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  align-items: center;
+  gap: 1em;
+  background-color: #0f172a;
+  padding: 2em clamp(1em, 5vw, 2em);
+  border-radius: 10px;
+}
+.match-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.opponent-team {
+  font-size: 2rem;
+}
+.date {
+  font-size: 1.7rem;
+}
+.opponent-team,
+.date {
+  font-weight: bold;
+}
+
+.opponent-team-logo-container img {
+  max-width: 100%;
+}
+.latest-match-info {
+  text-align: right;
+}
+.latest-match-info p:nth-child(odd) {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@media (max-width: 580px) {
+  .latest-match-container {
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+  .match-details {
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.301);
+    padding: 1em 0;
+  }
+  .latest-match-info {
+    text-align: left;
+  }
+  .opponent-team-logo-container {
+    order: -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .opponent-team-logo-container img {
+    max-width: 50%;
+  }
+  .latest-match-info p:nth-child(even) {
+    text-align: right;
+  }
+}
